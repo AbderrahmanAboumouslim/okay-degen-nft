@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Button from './Button';
 import Logo from '../assets/logo.svg';
@@ -15,12 +16,22 @@ const Navbar = () => {
       <Container>
         <img src={Logo} />
 
-        <List clicked={click}>
-          <ListItem>Home</ListItem>
-          <ListItem>Roadmap</ListItem>
-          <ListItem>Declaration</ListItem>
-          <ListItem>Staking</ListItem>
-          <ListItem>Launchapd</ListItem>
+        <List>
+          <ListItem>
+            <Link to="/">Home</Link>
+          </ListItem>
+          <ListItem>
+            <Link to="roadmap">Roadmap</Link>
+          </ListItem>
+          <ListItem>
+            <Link to="declaration">Declaration</Link>
+          </ListItem>
+          <ListItem>
+            <Link to="staking">Staking</Link>
+          </ListItem>
+          <ListItem>
+            <Link to="launchpad">Launchpad</Link>
+          </ListItem>
         </List>
         {/* <div className="mobile">
           <Button text="MINT SOON" link="https://google.com" />

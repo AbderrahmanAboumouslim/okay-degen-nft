@@ -16,8 +16,8 @@ const App = () => {
     <>
       <MainStyle />
       <ThemeProvider theme={light}>
-        <Navbar />
         <BrowserRouter>
+          <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="roadmap" element={<Roadmap />} />
