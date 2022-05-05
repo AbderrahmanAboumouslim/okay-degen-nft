@@ -66,6 +66,9 @@ const Nav = styled.nav`
       margin: 1rem auto;
     }
   } */
+  img {
+    width: 200px;
+  }
 `;
 
 const Container = styled.div`
