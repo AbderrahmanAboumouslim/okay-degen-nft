@@ -1,25 +1,34 @@
-import logo from './logo.svg';
+import { ThemeProvider } from 'styled-components';
 import './App.css';
+import MainStyle from './Styling/MainStyle';
+import { light } from './Styling/Theme';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-function App() {
+import Home from './components/pages/Home';
+import Roadmap from './components/pages/Roadmap';
+import Staking from './components/pages/Staking';
+import Declaration from './components/pages/Declaration';
+import Launchpad from './components/pages/Launchpad';
+import Navbar from './components/Navbar';
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <MainStyle />
+      <ThemeProvider theme={light}>
+        <Navbar />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="roadmap" element={<Roadmap />} />
+            <Route path="staking" element={<Staking />} />
+            <Route path="launchpad" element={<Launchpad />} />
+            <Route path="declaration" element={<Declaration />} />
+          </Routes>
+        </BrowserRouter>
+      </ThemeProvider>
+    </>
   );
-}
+};
 
 export default App;
