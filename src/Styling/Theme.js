@@ -1,5 +1,9 @@
 export const light = {
-  body: 'rgb(6, 17, 60)',
+  aColor: '#402d28',
+  bColor: '#bb9772',
+  cColor: '#f3eadb',
+  dColor: '#fff9f0',
+
   text: 'rgb(255, 140, 50)',
 
   bodyRgba: '255, 255, 255',

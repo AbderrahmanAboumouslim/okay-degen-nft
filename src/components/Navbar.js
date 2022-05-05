@@ -5,6 +5,7 @@ import Logo from '../assets/logo.svg';
 import Menu from '../assets/icons/menu.png';
 import Exit from '../assets/icons/exit.png';
 import { linkToMint } from './Helpers';
+import { FaDiscord, FaTwitter } from 'react-icons/fa';
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
@@ -21,9 +22,14 @@ const Navbar = () => {
           <ListItem>Staking</ListItem>
           <ListItem>Launchapd</ListItem>
         </List>
-        <div className="mobile">
+        {/* <div className="mobile">
           <Button text="MINT SOON" link="https://google.com" />
-        </div>
+        </div> */}
+
+        <Socials>
+          <FaTwitter />
+          <FaDiscord />
+        </Socials>
 
         <Bars onClick={() => setClick(!click)}>
           {click ? (
@@ -39,7 +45,7 @@ const Navbar = () => {
 
 const Nav = styled.nav`
   width: 100vw;
-  background-color: ${props => props.theme.body};
+  background-color: ${props => props.theme.dColor};
   /* .mint {
     display: flex;
     justify-content: center;
@@ -70,7 +76,7 @@ const List = styled.ul`
   justify-content: space-between;
   align-items: center;
   list-style: none;
-  color: ${props => props.theme.text};
+  color: ${props => props.theme.bColor};
   .mobile {
     display: none;
   }
@@ -100,17 +106,17 @@ const ListItem = styled.li`
   /* display: none; */
   margin: 0 1rem;
   cursor: pointer;
-  &::after {
-    content: ' ';
-    display: block;
-    width: 0%;
-    height: 2px;
-    background-color: ${props => props.theme.text};
-    transition: all 0.2s linear;
+  border: 2px solid ${props => props.theme.bColor};
+  background-color: ${props => props.theme.cColor};
+  color: ${props => props.theme.bColor};
+  transition: all 0.2s linear;
+  padding: 0.4rem;
+  border-radius: 1rem;
+
+  &:hover {
+    background-color: #fff;
   }
-  &:hover::after {
-    width: 100%;
-  }
+
   @media (max-width: 1024px) {
     margin: 1rem 0;
   }
@@ -130,6 +136,22 @@ const Bars = styled.div`
   }
   @media (max-width: 1024px) {
     display: flex;
+  }
+`;
+
+const Socials = styled.div`
+  svg {
+    cursor: pointer;
+    background-color: ${props => props.theme.cColor};
+    fill: ${props => props.theme.bColor};
+    margin: 0 0.5rem;
+    font-size: 1.5rem;
+    padding: 0.4rem;
+    border-radius: 1rem;
+
+    &:hover {
+      background-color: #fff;
+    }
   }
 `;
 
