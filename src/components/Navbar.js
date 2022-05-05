@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-// import Button from './Button';
+import Button from './Button';
 import Logo from '../assets/logo.svg';
 import Menu from '../assets/icons/menu.png';
 import Exit from '../assets/icons/exit.png';
-// import { linkToMint } from './helpers';
+import { linkToMint } from './Helpers';
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
@@ -13,6 +13,18 @@ const Navbar = () => {
     <Nav id="navbar">
       <Container>
         <img src={Logo} />
+
+        <List clicked={click}>
+          <ListItem>Home</ListItem>
+          <ListItem>Roadmap</ListItem>
+          <ListItem>Declaration</ListItem>
+          <ListItem>Staking</ListItem>
+          <ListItem>Launchapd</ListItem>
+        </List>
+        <div className="mobile">
+          <Button text="MINT SOON" link="https://google.com" />
+        </div>
+
         <Bars onClick={() => setClick(!click)}>
           {click ? (
             <img alt="exit" src={Exit} />
@@ -20,26 +32,7 @@ const Navbar = () => {
             <img alt="menu" src={Menu} />
           )}
         </Bars>
-        <List clicked={click}>
-          <ListItem>Home</ListItem>
-          <ListItem>Roadmap</ListItem>
-          <ListItem>Declaration</ListItem>
-          <ListItem>Staking</ListItem>
-          <ListItem>Launchapd</ListItem>
-
-          <div className="mobile">
-            <Button text="MINT SOON" link="https://google.com" />
-          </div>
-        </List>
       </Container>
-      <div className="mint">
-        <div className="desktop">
-          <Button text="MINT" link={linkToMint} />
-          {/* <div id="mint-button-container" />
-          <div className="left">93/100</div>
-          <h3 style={{ margin: '1rem 0' }}></h3> */}
-        </div>
-      </div>
     </Nav>
   );
 };
@@ -47,7 +40,7 @@ const Navbar = () => {
 const Nav = styled.nav`
   width: 100vw;
   background-color: ${props => props.theme.body};
-  .mint {
+  /* .mint {
     display: flex;
     justify-content: center;
     .left {
@@ -55,7 +48,7 @@ const Nav = styled.nav`
       justify-content: center;
       margin: 1rem auto;
     }
-  }
+  } */
 `;
 
 const Container = styled.div`
