@@ -16,7 +16,7 @@ const Navbar = () => {
       <Container>
         <img src={Logo} />
 
-        <List>
+        <List clicked={click}>
           <ListItem>
             <Link to="/">Home</Link>
           </ListItem>
