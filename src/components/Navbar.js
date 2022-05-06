@@ -17,23 +17,23 @@ const Navbar = () => {
         <img src={Logo} />
 
         <List clicked={click}>
-          <Link to="/">
+          <Link to="/" onClick={() => setClick(false)}>
             <ListItem>Home</ListItem>
           </Link>
-          <Link to="station">
+          <Link to="station" onClick={() => setClick(false)}>
             <ListItem>Station</ListItem>
           </Link>
-          <Link to="roadmap">
+          <Link to="roadmap" onClick={() => setClick(false)}>
             <ListItem>Roadmap</ListItem>
           </Link>
-          <Link to="declaration">
+          <Link to="declaration" onClick={() => setClick(false)}>
             <ListItem>Declaration</ListItem>
           </Link>
-          <div disabled="true">
+          <div disabled="true" onClick={() => setClick(false)}>
             <ListItem>Staking</ListItem>
           </div>
 
-          <div disabled="true" to="launchpad">
+          <div disabled="true" onClick={() => setClick(false)}>
             <ListItem>Launchpad</ListItem>
           </div>
         </List>
