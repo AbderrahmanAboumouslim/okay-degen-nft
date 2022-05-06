@@ -29,13 +29,13 @@ const Navbar = () => {
           <Link to="declaration">
             <ListItem>Declaration</ListItem>
           </Link>
-          <Link to="staking">
+          <div disabled="true">
             <ListItem>Staking</ListItem>
-          </Link>
+          </div>
 
-          <Link to="launchpad">
+          <div disabled="true" to="launchpad">
             <ListItem>Launchpad</ListItem>
-          </Link>
+          </div>
         </List>
         {/* <div className="mobile">
           <Button text="MINT SOON" link="https://google.com" />
