@@ -8,6 +8,7 @@ import light_k from '../../assets/light_k.png';
 import light_a from '../../assets/light_a.png';
 import light_y from '../../assets/light_y.png';
 import { useState } from 'react';
+import readRoadmap from '../../assets/readmap.png';
 
 function Home() {
   const [overo, setOvero] = useState(false);
@@ -15,46 +16,97 @@ function Home() {
   const [overa, setOvera] = useState(false);
   const [overy, setOvery] = useState(false);
 
+  const [display, setDisplay] = useState('');
+
+  // Mouse over
+
+  const OverO = () => {
+    setOvero(!overo);
+    setDisplay('No body ever changed');
+  };
+  const OverK = () => {
+    setOverk(!overk);
+    setDisplay('The world by doing');
+  };
+  const OverA = () => {
+    setOvera(!overa);
+    setDisplay('What everyone else');
+  };
+  const OverY = () => {
+    setOvery(!overy);
+    setDisplay('Was doing');
+  };
+
+  // Mouse Out
+
+  const OutO = () => {
+    setOvero(!overo);
+    setDisplay('');
+  };
+  const OutK = () => {
+    setOverk(!overk);
+    setDisplay('');
+  };
+  const OutA = () => {
+    setOvera(!overa);
+    setDisplay('');
+  };
+  const OutY = () => {
+    setOvery(!overy);
+    setDisplay('');
+  };
+
   return (
     <Wrapper>
       <Container>
-        <Display>We all know it is coming!</Display>
+        <Display>
+          <span>-</span>
+          {display}
+          <span>-</span>
+        </Display>
         <Okay>
           <Letter>
             <img
               src={overo ? light_o : dark_o}
-              onMouseOver={() => setOvero(!overo)}
-              onMouseOut={() => setOvero(!overo)}
+              onMouseOver={OverO}
+              onMouseOut={OutO}
               alt="O"
             />
           </Letter>
           <Letter>
             <img
               src={overk ? light_k : dark_k}
-              onMouseOver={() => setOverk(!overk)}
-              onMouseOut={() => setOverk(!overk)}
+              onMouseOver={OverK}
+              onMouseOut={OutK}
               alt="K"
             />
           </Letter>
           <Letter>
             <img
               src={overa ? light_a : dark_a}
-              onMouseOver={() => setOvera(!overa)}
-              onMouseOut={() => setOvera(!overa)}
+              onMouseOver={OverA}
+              onMouseOut={OutA}
               alt="a"
             />
           </Letter>
           <Letter>
             <img
               src={overy ? light_y : dark_y}
-              onMouseOver={() => setOvery(!overy)}
-              onMouseOut={() => setOvery(!overy)}
+              onMouseOver={OverY}
+              onMouseOut={OutY}
               alt="y"
             />
           </Letter>
         </Okay>
       </Container>
-      <Footer></Footer>
+      <Footer>
+        <div>
+          © {new Date().getFullYear()}, Okay Degens <br /> All right reserved.
+        </div>
+        <div>
+          <img src={readRoadmap} alt="read roadmap" />
+        </div>
+      </Footer>
     </Wrapper>
   );
 }
@@ -63,12 +115,18 @@ const Wrapper = styled.div`
   width: 100vw;
   height: ${props => `calc(100vh - ${props.theme.navHeight})`};
   background-color: ${props => props.theme.dColor};
+
+  position: relative;
 `;
 
 const Display = styled.div`
   color: ${props => props.theme.bColor};
   font-size: ${props => props.theme.fontlg};
   text-align: center;
+
+  span {
+    color: transparent;
+  }
 `;
 
 const Container = styled.div`
@@ -86,9 +144,23 @@ const Okay = styled.div`
 `;
 
 const Letter = styled.div`
-  transform: skew(-10deg);
+  transform: skew(-7deg);
 `;
 
-const Footer = styled.footer``;
+const Footer = styled.footer`
+  width: 85vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  color: ${props => props.theme.bColor};
+  font-size: ${props => props.theme.fontlg};
+  margin: auto;
+  margin-top: 5rem;
+
+  img {
+    border-radius: 6rem;
+  }
+`;
 
 export default Home;
