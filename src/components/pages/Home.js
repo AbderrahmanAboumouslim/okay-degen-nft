@@ -111,9 +111,9 @@ function Home() {
         <Degen>Degen</Degen>
       </Container>
       <Footer>
-        <div style={{ textAlign: 'center' }}>
+        <LeftFooter style={{ textAlign: 'center' }}>
           © {new Date().getFullYear()}, Okay Degens <br /> All right reserved.
-        </div>
+        </LeftFooter>
 
         <Readmap>
           <span>Read roadmap {'==>'}</span>
@@ -226,6 +226,10 @@ const Readmap = styled.div`
     padding: 2rem;
     height: 10rem;
   }
+`;
+
+const LeftFooter = styled.div`
+  font-size: ${props => props.theme.fontxs};
 `;
 
 export default Home;

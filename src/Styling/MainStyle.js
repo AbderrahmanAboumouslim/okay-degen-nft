@@ -9,6 +9,7 @@ const MainStyle = createGlobalStyle`
 body{
     font-family: "Inter", sans-serif;
     overflow-x: hidden;
+    line-height: 1.5;
 }
 h1,h2,h3,h4,h5,h6{
     margin:0;

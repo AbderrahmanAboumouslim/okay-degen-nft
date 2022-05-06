@@ -7,7 +7,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './components/pages/Home';
 import Roadmap from './components/pages/Roadmap';
 import Staking from './components/pages/Staking';
-import Declaration from './components/pages/Declaration';
+import Station from './components/pages/Station';
 import Launchpad from './components/pages/Launchpad';
 import Navbar from './components/Navbar';
 
@@ -23,7 +23,7 @@ const App = () => {
             <Route path="roadmap" element={<Roadmap />} />
             <Route path="staking" element={<Staking />} />
             <Route path="launchpad" element={<Launchpad />} />
-            <Route path="declaration" element={<Declaration />} />
+            <Route path="station" element={<Station />} />
           </Routes>
         </BrowserRouter>
       </ThemeProvider>

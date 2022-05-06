@@ -20,6 +20,9 @@ const Navbar = () => {
           <Link to="/">
             <ListItem>Home</ListItem>
           </Link>
+          <Link to="station">
+            <ListItem>Station</ListItem>
+          </Link>
           <Link to="roadmap">
             <ListItem>Roadmap</ListItem>
           </Link>
