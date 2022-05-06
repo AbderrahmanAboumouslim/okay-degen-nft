@@ -17,21 +17,22 @@ const Navbar = () => {
         <img src={Logo} />
 
         <List clicked={click}>
-          <ListItem>
-            <Link to="/">Home</Link>
-          </ListItem>
-          <ListItem>
-            <Link to="roadmap">Roadmap</Link>
-          </ListItem>
-          <ListItem>
-            <Link to="declaration">Declaration</Link>
-          </ListItem>
-          <ListItem>
-            <Link to="staking">Staking</Link>
-          </ListItem>
-          <ListItem>
-            <Link to="launchpad">Launchpad</Link>
-          </ListItem>
+          <Link to="/">
+            <ListItem>Home</ListItem>
+          </Link>
+          <Link to="roadmap">
+            <ListItem>Roadmap</ListItem>
+          </Link>
+          <Link to="declaration">
+            <ListItem>Declaration</ListItem>
+          </Link>
+          <Link to="staking">
+            <ListItem>Staking</ListItem>
+          </Link>
+
+          <Link to="launchpad">
+            <ListItem>Launchpad</ListItem>
+          </Link>
         </List>
         {/* <div className="mobile">
           <Button text="MINT SOON" link="https://google.com" />
@@ -67,7 +68,7 @@ const Nav = styled.nav`
     }
   } */
   img {
-    width: 200px;
+    width: fit-content;
   }
 `;
 

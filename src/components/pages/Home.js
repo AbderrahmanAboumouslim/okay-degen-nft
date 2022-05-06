@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+
 import dark_o from '../../assets/dark_o.png';
 import dark_k from '../../assets/dark_k.png';
 import dark_a from '../../assets/dark_a.png';
@@ -56,6 +58,8 @@ function Home() {
     setDisplay('');
   };
 
+  const mq = window.matchMedia('(max-width: 990px)').matches;
+
   return (
     <Wrapper>
       <Container>
@@ -81,31 +85,41 @@ function Home() {
               alt="K"
             />
           </Letter>
-          <Letter>
-            <img
-              src={overa ? light_a : dark_a}
-              onMouseOver={OverA}
-              onMouseOut={OutA}
-              alt="a"
-            />
-          </Letter>
-          <Letter>
-            <img
-              src={overy ? light_y : dark_y}
-              onMouseOver={OverY}
-              onMouseOut={OutY}
-              alt="y"
-            />
-          </Letter>
+
+          {mq ? null : (
+            <Letter>
+              <img
+                src={overa ? light_a : dark_a}
+                onMouseOver={OverA}
+                onMouseOut={OutA}
+                alt="a"
+              />
+            </Letter>
+          )}
+
+          {mq ? null : (
+            <Letter>
+              <img
+                src={overy ? light_y : dark_y}
+                onMouseOver={OverY}
+                onMouseOut={OutY}
+                alt="y"
+              />
+            </Letter>
+          )}
         </Okay>
       </Container>
       <Footer>
-        <div>
+        <div style={{ textAlign: 'center' }}>
           © {new Date().getFullYear()}, Okay Degens <br /> All right reserved.
         </div>
-        <div>
-          <img src={readRoadmap} alt="read roadmap" />
-        </div>
+
+        <Readmap>
+          <span>Read roadmap {'==>'}</span>
+          <Link to="roadmap">
+            <img src={readRoadmap} alt="read roadmap" />
+          </Link>
+        </Readmap>
       </Footer>
     </Wrapper>
   );
@@ -117,6 +131,10 @@ const Wrapper = styled.div`
   background-color: ${props => props.theme.dColor};
 
   position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 
 const Display = styled.div`
@@ -130,25 +148,40 @@ const Display = styled.div`
 `;
 
 const Container = styled.div`
-  width: 50%;
+  width: 70%;
+  height: 70vh;
   padding: 2rem auto;
   margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  @media (max-width: 990px) {
+    height: 60vh;
+  }
 `;
 
 const Okay = styled.div`
   display: flex;
   justify-content: space-around;
   width: 100%;
-  height: 40%;
+  height: 90%;
   margin: 1rem auto;
+
+  @media (max-width: 990px) {
+    height: 60%;
+  }
 `;
 
 const Letter = styled.div`
+  height: 100%;
   transform: skew(-7deg);
 `;
 
 const Footer = styled.footer`
   width: 85vw;
+  height: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -156,10 +189,32 @@ const Footer = styled.footer`
   color: ${props => props.theme.bColor};
   font-size: ${props => props.theme.fontlg};
   margin: auto;
-  margin-top: 5rem;
 
   img {
     border-radius: 6rem;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+    padding: 2rem;
+  }
+`;
+
+const Readmap = styled.div`
+  display: flex;
+  align-items: center;
+  color: ${props => props.theme.aColor};
+
+  img {
+    display: block;
+    width: 70px;
+    height: 70px;
+    margin-left: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    padding: 2rem;
+    height: 10rem;
   }
 `;
 
