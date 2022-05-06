@@ -21,7 +21,7 @@ export const light = {
 
   fontButton: '0.875em',
 
-  navHeight: '5rem',
+  navHeight: '8rem',
 };
 
 export const dark = {

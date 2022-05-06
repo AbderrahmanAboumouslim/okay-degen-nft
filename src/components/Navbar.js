@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Button from './Button';
-import Logo from '../assets/logo.svg';
+import Logo from '../assets/logo.png';
 import Menu from '../assets/icons/menu.png';
 import Exit from '../assets/icons/exit.png';
 import { linkToMint } from './Helpers';
@@ -85,6 +85,9 @@ const Nav = styled.nav`
   } */
   img {
     width: fit-content;
+    height: 10rem;
+
+    padding-bottom: 1rem;
   }
 `;
 
