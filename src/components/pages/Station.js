@@ -63,36 +63,49 @@ const Station = () => {
           </Info>
         </QuickNote>
         <Links>
-          <Room>
-            <SubContainer>
-              <SubTitle>TWITTER</SubTitle>
-              <SubInfo>Be the first to know</SubInfo>
-            </SubContainer>
-            <FaTwitter />
-          </Room>
-          <Room>
-            <SubContainer>
-              <SubTitle>ROADMAP</SubTitle>
-              <SubInfo>Read our roadmap</SubInfo>
-            </SubContainer>
-            <FaRoad />
-          </Room>
-          <Room>
-            <SubContainer>
-              <SubTitle>DECLARATION</SubTitle>
-              <SubInfo>Degen with us</SubInfo>
-            </SubContainer>
-            <FaVoicemail />
-          </Room>
-          <Room>
-            <SubContainer>
-              <SubTitle>DISOCRD</SubTitle>
-              <SubInfo>Enter the station</SubInfo>
-            </SubContainer>
-            <FaDiscord />
-          </Room>
+          <a href="https://twitter.com/OkayDegen">
+            <Room>
+              <SubContainer>
+                <SubTitle>TWITTER</SubTitle>
+                <SubInfo>Be the first to know</SubInfo>
+              </SubContainer>
+              <FaTwitter />
+            </Room>
+          </a>
+          <Link to="/roadmap">
+            <Room>
+              <SubContainer>
+                <SubTitle>ROADMAP</SubTitle>
+                <SubInfo>Read our roadmap</SubInfo>
+              </SubContainer>
+              <FaRoad />
+            </Room>
+          </Link>
+
+          <Link to="/declaration">
+            <Room>
+              <SubContainer>
+                <SubTitle>DECLARATION</SubTitle>
+                <SubInfo>Degen with us</SubInfo>
+              </SubContainer>
+              <FaVoicemail />
+            </Room>
+          </Link>
+
+          <a href="http://discord.gg/SEStyQMWmx">
+            <Room>
+              <SubContainer>
+                <SubTitle>DISOCRD</SubTitle>
+                <SubInfo>Enter the station</SubInfo>
+              </SubContainer>
+              <FaDiscord />
+            </Room>
+          </a>
         </Links>
       </Container>
+      <LeftFooter style={{ textAlign: 'center' }}>
+        © {new Date().getFullYear()}, Okay Degens <br /> All right reserved.
+      </LeftFooter>
     </Wrapper>
   );
 };
@@ -178,21 +191,41 @@ const Info = styled.div`
 `;
 
 const Links = styled.div`
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   justify-content: center;
   width: 100%;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+
+  a {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    margin: 0.5rem;
+  }
 `;
 
 const Room = styled.div`
-  width: 40%;
-  background-color: lightgray;
-  margin: 1rem;
-  padding: 0.4rem;
+  width: 70%;
+  background-color: ${props => props.theme.cColor};
+  /* margin: 1rem; */
+  padding: 2rem;
   border-radius: 0.2rem;
 
   display: flex;
   justify-content: space-between;
+  align-items: center;
+
+  svg {
+    font-size: 2.5rem;
+  }
+
+  &:hover {
+    background-color: #fff;
+  }
 `;
 
 const SubContainer = styled.div`
@@ -207,4 +240,8 @@ const SubInfo = styled.div`
   color: ${props => props.theme.bColor};
 `;
 
+const LeftFooter = styled.div`
+  font-size: ${props => props.theme.fontxs};
+  padding: 2rem;
+`;
 export default Station;
