@@ -108,6 +108,7 @@ function Home() {
             </Letter>
           )}
         </Okay>
+        <Degen>Degen</Degen>
       </Container>
       <Footer>
         <div style={{ textAlign: 'center' }}>
@@ -177,6 +178,15 @@ const Okay = styled.div`
 const Letter = styled.div`
   height: 100%;
   transform: skew(-7deg);
+`;
+
+const Degen = styled.div`
+  position: absolute;
+  top: 50%;
+  right: 0rem;
+  color: ${props => props.theme.cColor};
+  font-size: 3rem;
+  transform: rotate(90deg) translate(-50%, -50%);
 `;
 
 const Footer = styled.footer`
