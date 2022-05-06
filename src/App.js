@@ -10,6 +10,7 @@ import Staking from './components/pages/Staking';
 import Station from './components/pages/Station';
 import Launchpad from './components/pages/Launchpad';
 import Navbar from './components/Navbar';
+import Declaration from './components/pages/Declaration';
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
             <Route path="staking" element={<Staking />} />
             <Route path="launchpad" element={<Launchpad />} />
             <Route path="station" element={<Station />} />
+            <Route path="declaration" element={<Declaration />} />
           </Routes>
         </BrowserRouter>
       </ThemeProvider>

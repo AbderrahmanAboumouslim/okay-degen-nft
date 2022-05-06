@@ -63,7 +63,11 @@ const Station = () => {
           </Info>
         </QuickNote>
         <Links>
-          <a href="https://twitter.com/OkayDegen">
+          <a
+            href="https://twitter.com/OkayDegen"
+            target="_blank"
+            rel="noreferrer"
+          >
             <Room>
               <SubContainer>
                 <SubTitle>TWITTER</SubTitle>
@@ -92,7 +96,11 @@ const Station = () => {
             </Room>
           </Link>
 
-          <a href="http://discord.gg/SEStyQMWmx">
+          <a
+            href="http://discord.gg/SEStyQMWmx"
+            target="_blank"
+            rel="noreferrer"
+          >
             <Room>
               <SubContainer>
                 <SubTitle>DISOCRD</SubTitle>
@@ -223,6 +231,10 @@ const Links = styled.div`
     height: auto;
     margin: 0.5rem auto;
     margin-left: 2.5rem;
+
+    @media (max-width: 500px) {
+      margin-left: 1.5rem;
+    }
   }
 `;
 

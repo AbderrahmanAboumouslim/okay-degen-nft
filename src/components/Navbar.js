@@ -42,8 +42,21 @@ const Navbar = () => {
         </div> */}
 
         <Socials>
-          <FaTwitter />
-          <FaDiscord />
+          <a
+            href="https://twitter.com/OkayDegen"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaTwitter />
+          </a>
+
+          <a
+            href="http://discord.gg/SEStyQMWmx"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaDiscord />
+          </a>
         </Socials>
 
         <Bars onClick={() => setClick(!click)}>
