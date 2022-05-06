@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { FaDiscord, FaRoad, FaTwitter, FaVoicemail } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import daycity from '../../assets/daycity.png';
@@ -64,10 +65,31 @@ const Station = () => {
         <Links>
           <Room>
             <SubContainer>
-              <SubTitle>subtitle</SubTitle>
-              <SubInfo>subinfo</SubInfo>
+              <SubTitle>TWITTER</SubTitle>
+              <SubInfo>Be the first to know</SubInfo>
             </SubContainer>
-            <img src="" alt="little icon" />
+            <FaTwitter />
+          </Room>
+          <Room>
+            <SubContainer>
+              <SubTitle>ROADMAP</SubTitle>
+              <SubInfo>Read our roadmap</SubInfo>
+            </SubContainer>
+            <FaRoad />
+          </Room>
+          <Room>
+            <SubContainer>
+              <SubTitle>DECLARATION</SubTitle>
+              <SubInfo>Degen with us</SubInfo>
+            </SubContainer>
+            <FaVoicemail />
+          </Room>
+          <Room>
+            <SubContainer>
+              <SubTitle>DISOCRD</SubTitle>
+              <SubInfo>Enter the station</SubInfo>
+            </SubContainer>
+            <FaDiscord />
           </Room>
         </Links>
       </Container>
@@ -155,14 +177,34 @@ const Info = styled.div`
   font-weight: 300;
 `;
 
-const Links = styled.div``;
+const Links = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+`;
 
-const Room = styled.div``;
+const Room = styled.div`
+  width: 40%;
+  background-color: lightgray;
+  margin: 1rem;
+  padding: 0.4rem;
+  border-radius: 0.2rem;
 
-const SubContainer = styled.div``;
+  display: flex;
+  justify-content: space-between;
+`;
 
-const SubTitle = styled.div``;
+const SubContainer = styled.div`
+  width: 100%;
+`;
 
-const SubInfo = styled.div``;
+const SubTitle = styled.div`
+  color: ${props => props.theme.aColor};
+`;
+
+const SubInfo = styled.div`
+  color: ${props => props.theme.bColor};
+`;
 
 export default Station;
