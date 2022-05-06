@@ -125,6 +125,10 @@ const Container = styled.div`
 const HeadText = styled.div`
   padding: 3rem 0;
 
+  @media (max-width: 500px) {
+    text-align: center;
+  }
+
   p {
     font-weight: 700;
     margin-bottom: 1.4rem;
@@ -137,6 +141,10 @@ const HeadText = styled.div`
     font-style: italic;
     font-size: ${props => props.theme.fontxl};
     color: ${props => props.theme.aColor};
+
+    @media (max-width: 500px) {
+      font-size: ${props => props.theme.fontlg};
+    }
   }
 `;
 
@@ -155,6 +163,10 @@ const About = styled.div`
   margin-top: 3rem;
   width: 50%;
   text-align: center;
+
+  @media (max-width: 500px) {
+    width: 80%;
+  }
 
   h3 {
     display: inline-block;
@@ -182,6 +194,10 @@ const Title = styled.h1`
   padding-top: 2rem;
   margin: 0rem auto;
   width: fit-content;
+
+  @media (max-width: 500px) {
+    font-size: ${props => props.theme.fontxl};
+  }
 `;
 
 const Info = styled.div`
@@ -193,8 +209,9 @@ const Info = styled.div`
 const Links = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  justify-content: center;
-  width: 100%;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
@@ -202,9 +219,10 @@ const Links = styled.div`
 
   a {
     display: inline-block;
-    width: 100%;
+    width: 90%;
     height: auto;
-    margin: 0.5rem;
+    margin: 0.5rem auto;
+    margin-left: 2.5rem;
   }
 `;
 

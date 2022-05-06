@@ -69,6 +69,10 @@ const Title = styled.h1`
   padding-top: 2rem;
   margin: 0rem auto;
   width: fit-content;
+
+  @media (max-width: 500px) {
+    font-size: ${props => props.theme.fontxl};
+  }
 `;
 
 const TeamContainer = styled.div`
