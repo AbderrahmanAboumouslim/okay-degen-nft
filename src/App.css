@@ -38,11 +38,12 @@
 }
 
 ::-webkit-scrollbar {
-  width: 20px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
   background-color: #bb9772;
+  background-image: linear-gradient(#bb9772, #402d28);
 }
 
 ::-webkit-scrollbar-thumb {
