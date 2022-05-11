@@ -140,7 +140,7 @@ const Grid = styled.div`
 `;
 const Left = styled.div`
   grid-area: left;
-  background-color: gray;
+  background-color: ${props => props.theme.bColor};
   color: ${props => props.theme.aColor};
 
   display: flex;
@@ -162,7 +162,7 @@ const Center = styled.div`
 `;
 const Right = styled.div`
   grid-area: right;
-  background-color: aqua;
+  background-color: ${props => props.theme.bColor};
 
   display: flex;
   justify-content: center;
@@ -176,7 +176,7 @@ const Right = styled.div`
 `;
 
 const One = styled.div`
-  background-color: lightblue;
+  background-color: ${props => props.theme.bColor};
 
   display: flex;
   justify-content: center;
@@ -187,7 +187,7 @@ const One = styled.div`
   }
 `;
 const Two = styled.div`
-  background-color: lightcoral;
+  background-color: ${props => props.theme.bColor};
 
   display: flex;
   justify-content: center;
@@ -198,7 +198,7 @@ const Two = styled.div`
   }
 `;
 const Three = styled.div`
-  background-color: lightsalmon;
+  background-color: ${props => props.theme.bColor};
 
   display: flex;
   justify-content: center;
@@ -209,7 +209,7 @@ const Three = styled.div`
   }
 `;
 const Four = styled.div`
-  background-color: lightgray;
+  background-color: ${props => props.theme.bColor};
 
   display: flex;
   justify-content: center;

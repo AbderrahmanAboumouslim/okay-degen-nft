@@ -11,6 +11,7 @@ import Station from './components/pages/Station';
 import Launchpad from './components/pages/Launchpad';
 import Navbar from './components/Navbar';
 import Declaration from './components/pages/Declaration';
+import Whitepaper from './components/pages/Whitepaper';
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="roadmap" element={<Roadmap />} />
+            <Route path="whitepaper" element={<Whitepaper />} />
             <Route path="staking" element={<Staking />} />
             <Route path="launchpad" element={<Launchpad />} />
             <Route path="station" element={<Station />} />

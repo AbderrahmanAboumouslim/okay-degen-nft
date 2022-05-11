@@ -26,6 +26,9 @@ const Navbar = () => {
           <Link to="roadmap" onClick={() => setClick(false)}>
             <ListItem>Roadmap</ListItem>
           </Link>
+          <Link to="whitepaper" onClick={() => setClick(false)}>
+            <ListItem>Whitepaper</ListItem>
+          </Link>
           <Link to="declaration" onClick={() => setClick(false)}>
             <ListItem>Declaration</ListItem>
           </Link>
