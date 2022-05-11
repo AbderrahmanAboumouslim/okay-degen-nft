@@ -34,7 +34,9 @@ export const phases = {
 };
 
 export const whitepaper = {
-  p0: 'Okay Degen is a 555-degen collection created on the Solana blockchain. We are creating a project in which our holders interact with their NFTs in a number of ways while also benefiting from the various utilities that we will release as soon as we become a DAO. We will lay down each phase of our roadmap in this Whitepaper so that you may better grasp our vision.',
+  p0: [
+    'Okay Degen is a 555-degen collection created on the Solana blockchain. We are creating a project in which our holders interact with their NFTs in a number of ways while also benefiting from the various utilities that we will release as soon as we become a DAO. We will lay down each phase of our roadmap in this Whitepaper so that you may better grasp our vision.',
+  ],
   p1: [
     'This is where the Okay Degen team comes in to produce a project unlike any other in the Solana ecosystem. We begin by building our social media accounts and growing them as naturally as possible',
     'Throughout this time, we will establishing a strong community in our discord. We will announce a mint date whenever we are confident in our progress.',

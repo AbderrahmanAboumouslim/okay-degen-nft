@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import '@fontsource/inter';
+import '@fontsource/rubik-wet-paint';
 
 const MainStyle = createGlobalStyle`
 *,*::before,*::after{

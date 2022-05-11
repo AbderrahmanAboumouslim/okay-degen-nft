@@ -7,7 +7,7 @@ const Roadmap = () => {
 
   const [show, setShow] = useState([]);
 
-  const LeftDisplay = id => {
+  const DisplayInfo = id => {
     setIsOpen(!isOpen);
     setShow(id);
   };
@@ -17,14 +17,14 @@ const Roadmap = () => {
       <h2>ROADMAP</h2>
       <h1>WE'RE BUILDING THIS TOGETHER</h1>
       <Grid>
-        <Left onClick={() => LeftDisplay(phases.phase1)}>PHASE 1</Left>
+        <Left onClick={() => DisplayInfo(phases.phase1)}>PHASE 1</Left>
         <Center>
-          <One onClick={() => LeftDisplay(phases.phase2)}>PHASE 2</One>
-          <Two onClick={() => LeftDisplay(phases.phase3)}>PHASE 3</Two>
-          <Three onClick={() => LeftDisplay(phases.phase4)}>PHASE 4</Three>
-          <Four onClick={() => LeftDisplay(phases.phase5)}>PHASE 5</Four>
+          <One onClick={() => DisplayInfo(phases.phase2)}>PHASE 2</One>
+          <Two onClick={() => DisplayInfo(phases.phase3)}>PHASE 3</Two>
+          <Three onClick={() => DisplayInfo(phases.phase4)}>PHASE 4</Three>
+          <Four onClick={() => DisplayInfo(phases.phase5)}>PHASE 5</Four>
         </Center>
-        <Right onClick={() => LeftDisplay(phases.phase6)}>PHASE 6</Right>
+        <Right onClick={() => DisplayInfo(phases.phase6)}>PHASE 6</Right>
 
         {isOpen ? (
           <div className="ai">

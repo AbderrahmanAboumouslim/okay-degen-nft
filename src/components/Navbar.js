@@ -32,13 +32,13 @@ const Navbar = () => {
           <Link to="declaration" onClick={() => setClick(false)}>
             <ListItem>Declaration</ListItem>
           </Link>
-          <div disabled="true" onClick={() => setClick(false)}>
+          {/* <div disabled="true" onClick={() => setClick(false)}>
             <ListItem>Staking</ListItem>
           </div>
 
           <div disabled="true" onClick={() => setClick(false)}>
             <ListItem>Launchpad</ListItem>
-          </div>
+          </div> */}
         </List>
         {/* <div className="mobile">
           <Button text="MINT SOON" link="https://google.com" />
