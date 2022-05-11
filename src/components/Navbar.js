@@ -20,7 +20,7 @@ const Navbar = () => {
           <Link to="/" onClick={() => setClick(false)}>
             <ListItem>Home</ListItem>
           </Link>
-          <Link to="station" onClick={() => setClick(false)}>
+          <Link to="/station" onClick={() => setClick(false)}>
             <ListItem>Station</ListItem>
           </Link>
           <Link to="roadmap" onClick={() => setClick(false)}>
