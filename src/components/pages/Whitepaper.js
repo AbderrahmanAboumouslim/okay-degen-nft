@@ -45,7 +45,7 @@ const Wrapper = styled.div`
   min-height: 100vh;
   background-color: ${props => props.theme.dColor};
   color: ${props => props.theme.cColor};
-  font-family: 'Rubik Wet Paint', cursive;
+  /* font-family: 'Rubik Wet Paint', cursive; */
   line-height: 1.6;
 
   font-size: 2rem;
@@ -111,7 +111,7 @@ const Phase = styled.div`
 const Display = styled.div`
   padding: 2rem 0.4rem;
   letter-spacing: 1px;
-  font-family: 'Rubik Wet Paint', cursive;
+  /* font-family: 'Rubik Wet Paint', cursive; */
   font-size: 1.5rem;
 
   p {
